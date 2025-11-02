@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import jwt from "jsonwebtoken";
 
-const PUBLIC_PATHS = ["/api/auth/login", "/api/auth/register"];
+const PUBLIC_PATHS = ["/api/auth/login", "/api/auth/register", "/api"];
 
 export function proxy(req: NextRequest) {
   if (PUBLIC_PATHS.some((p) => req.nextUrl.pathname.startsWith(p))) {
